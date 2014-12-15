@@ -4,5 +4,10 @@ p.newsspec_9779__not-supported {
 	color: white;
 	padding: 0.5em;
 }
+p.newsspec_9779__not-supported img {
+	display: block;
+	margin-bottom: 1em;
+	width: 100%;
+}
 </style>
-<p class="newsspec_9779__not-supported">We are aware that this interactive video may not work on some older browsers. You can find a non-interactive version of the content below.</p>
+<p class="newsspec_9779__not-supported"><img src="http://newsimg.bbc.co.uk/media/images/79733000/jpg/_79733432_code624.jpg" />This interactive video is a new technology being trialled by the BBC Connected Studio innovation programme and is best viewed with the latest version of Flash.  It does not currently work on iOS or Android mobile devices or tablets. You can find a non-interactive version of the content below.</p>

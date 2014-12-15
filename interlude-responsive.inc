@@ -22,8 +22,8 @@
 
             var textValues = [];
             textValues['en'] = {
-                before: 'INTERACTIVE VIDEO: Choose you journey through the video by clicking on the panels when they appear before the timer runs out. If you don\'t make a selection, you will be taken onto the next section automatically.',
-                after: 'This interactive video is a new technology being trialled by the <' + 'a href="http://www.bbc.co.uk/partnersandsuppliers/connectedstudio ">BBC Connected Studio innovation programme<' + '/a> and is best viewed with the latest version of <' + 'a href="http://get.adobe.com/flashplayer/">Flash<' + '/a> It does not currently work on iOS or Android mobile devices or tablets. If you have feedback about the interactive video experience, <' + 'a href="http://www.bbc.co.uk/partnersandsuppliers/connectedstudio/contactus">please let us know<' + '/a>',
+                before: '<' + 'p><' + 'strong>INTERACTIVE VIDEO: Choose you journey through the video by clicking on the panels when they appear before the timer runs out. If you don\'t make a selection, you will be taken onto the next section automatically.<' + '/strong><' + '/p>',
+                after: '<' + 'p>This interactive video is a new technology being trialled by the <' + 'a href="http://www.bbc.co.uk/partnersandsuppliers/connectedstudio ">BBC Connected Studio innovation programme<' + '/a> and is best viewed with the latest version of <' + 'a href="http://get.adobe.com/flashplayer/">Flash<' + '/a> It does not currently work on iOS or Android mobile devices or tablets. If you have feedback about the interactive video experience, <' + 'a href="http://www.bbc.co.uk/partnersandsuppliers/connectedstudio/contactus">please let us know<' + '/a><' + '/p><' + 'p>You can find the non-interactive version of this content below.<' + '/p>',
                 noSupport: 'Your browser does not support this interactive video.'
             };
             var currentLangText = (serviceId in textValues) ? textValues[serviceId] : textValues['en'],
@@ -44,7 +44,7 @@
             }
 
             function displayInterludeHolder () {
-                interludeContainer.innerHTML = '<p><strong>' + currentLangText.before + '</strong></p><a href="http://content.interlude.fm/player/bbc/<!--#echo var="INTERLUDE_ID" -->/iframe.html" class="interlude-holder" target="_blank"><img src="<!--#echo var="IMAGE_URL" -->" /></a><p>' + currentLangText.after + '</p>';
+                interludeContainer.innerHTML = currentLangText.before + '<a href="http://content.interlude.fm/player/bbc/<!--#echo var="INTERLUDE_ID" -->/iframe.html" class="interlude-holder" target="_blank"><img src="<!--#echo var="IMAGE_URL" -->" /></a>' + currentLangText.after;
             }
 
             /*
